@@ -384,79 +384,793 @@ footer{
     }
 }
 
-@media (width >= 992px){
+@media all and (max-width: 576px){
+    *{
+        font-family: "Trebuchet MS";
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
 
-    .txt-foto{
-        text-align: center;
-        visibility: collapse;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 200px;
-        height: 200px;
-        margin: 5px;
-        border-radius: 25px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        transition: opacity 1s ease-in-out, transform 1s ease-in-out, visibility 1s ease-in-out;
+    }
 
-        .naam-plaats-diploma {
-            font-size: 50px;
-            font-weight: bold;
+    body{
+        background-image: url("./foto's/achtergrondCv.png");
+        color: white;
+
+        .wit-ruimte{
+            height: 10vh;
         }
 
-        .kleine-text-onder-foto-diploma {
-            font-size: 40px;
-            font-style: italic;
-            font-weight: lighter;
+        .blok-soort-rechts{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: auto;
+            margin-bottom: 40px;
+            margin-top: 40px;
+
+            .rechts-box {
+                width: 40%;
+                text-align: center;
+                align-content: center;
+                align-items: center;
+                background-color: #00487C;
+                border-radius: 30px;
+                border-bottom-right-radius: 0px;
+                border-top-right-radius: 0px;
+
+                p {
+                    width: 60%;
+                    margin-left: 20%;
+                    margin-right: 10%;
+                    font-size: 15px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+            }
+
+            p{
+                width: 60%;
+                text-align: center;
+                align-content: center;
+            }
         }
 
-        .naam-plaats-werk {
-            font-size: 30px;
-            font-weight: bold;
+        .blok-soort-links{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: auto;
+            margin-bottom: 40px;
+            margin-top: 40px;
+
+            .links-box{
+                background-color: #00487C;
+                width: 40%;
+                border-radius: 30px;
+                border-bottom-left-radius: 0px;
+                border-top-left-radius: 0px;
+                text-align: center;
+                align-content: center;
+
+                p {
+                    width: 60%;
+                    margin-left: 20%;
+                    margin-right: 10%;
+                    font-size: 15px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+            }
+
+            p{
+                width: 60%;
+                text-align: center;
+                align-content: center;
+            }
         }
 
-        .kleine-text-onder-foto-werk {
-            font-size: 20px;
-            font-style: italic;
-            font-weight: lighter;
+        .div-procent-balk{
+            border-radius: 30px;
+            background-color: #04a8e3;
+            width: 60%;
+            margin-left: 20%;
+            margin-right: 20%;
+            height: 20%;
+            position: relative;
+
+            p{
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+            }
+
+            .tien-procent{
+                text-align: center;
+                border-radius: 30px;
+                background-color: #00487C;
+                height: 100%;
+                width: 10%;
+                font-size: 15px;
+
+            }
+
+            .zeventig-procent{
+                text-align: center;
+                border-radius: 30px;
+                background-color: #00487C;
+                height: 100%;
+                width: 70%;
+                align-content: center;
+                font-size: 14px;
+
+            }
+
+            .tachtig-procent{
+                text-align: center;
+                border-radius: 30px;
+                background-color: #00487C;
+                height: 100%;
+                width: 80%;
+                align-content: center;
+                font-size: 14px;
+
+            }
+
+            .negentig-procent{
+                text-align: center;
+                border-radius: 30px;
+                background-color: #00487C;
+                height: 100%;
+                width: 90%;
+                align-content: center;
+                font-size: 14px;
+
+            }
+        }
+
+        .div-scheiding{
+            width: 60%;
+            align-content: center;
+            text-align: center;
+        }
+
+        .fotos-title{
+            background-color: #04a8e3;
+            border-radius: 30px;
+            width: 50%;
+            margin-top: 5vh;
+            margin-left: 25%;
+            margin-right: 25%;
+            align-content: center;
+
+            h2{
+                text-align: center;
+                font-size: 30px;
+                margin: 20px;
+            }
+        }
+
+        .fotos{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 10%;
+
+            .foto-box img{
+                width: 80%;
+                height: auto;
+                object-fit: cover;
+                border: 5px solid #00487C;
+                border-radius: 30px;
+                transition: 1s;
+
+            }
+
+            .foto-box{
+                transition: 1s;
+            }
+
+            .foto-box:hover{
+                transform: scale(110%);
+                transition: transform 1s ease-in-out, border 1s ease-in-out;
+                .txt-foto{
+                    opacity: 1;
+                    visibility: visible;
+                    transition: opacity 1s ease-in-out;
+
+                }
+
+                .txt-foto-kwaakvos{
+                    opacity: 1;
+                    visibility: visible;
+                    transition: 1s;
+                }
+
+                img{
+                    opacity: 0.8;
+                    transition: opacity 1s ease-in-out;
+                }
+            }
+
+            .txt-foto{
+                text-align: center;
+                visibility: collapse;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 159px;
+                height: 159px;
+                margin: 5px;
+                border-radius: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                transition: opacity 1s ease-in-out, transform 1s ease-in-out, visibility 1s ease-in-out;
+
+                .naam-plaats-diploma {
+                    font-size: 27px;
+                    font-weight: bold;
+                }
+
+                .kleine-text-onder-foto-diploma {
+                    font-size: 20px;
+                    font-style: italic;
+                    font-weight: lighter;
+                }
+
+                .naam-plaats-werk {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                .kleine-text-onder-foto-werk {
+                    font-size: 15px;
+                    font-style: italic;
+                    font-weight: lighter;
+                }
+
+            }
+
+            .txt-foto-kwaakvos{
+                text-align: center;
+                visibility: collapse;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 159px;
+                height: 139px;
+                margin: 5px;
+                border-radius: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                transition: opacity 1s ease-in-out, transform 1s ease-in-out, visibility 1s ease-in-out;
+
+                .naam-plaats-werk {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                .kleine-text-onder-foto-werk {
+                    font-size: 15px;
+                    font-style: italic;
+                    font-weight: lighter;
+                }
+            }
+
         }
 
     }
 
-    .txt-foto-kwaakvos{
-        text-align: center;
-        visibility: collapse;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 300px;
-        height: 263px;
-        margin: 5px;
-        border-radius: 25px;
+    .intro {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-wrap: wrap;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        transition: opacity 1s ease-in-out, transform 1s ease-in-out, visibility 1s ease-in-out;
+        justify-content: center;
+        height: auto;
+        padding: 20px;
 
-        .naam-plaats-werk {
-            font-size: 30px;
-            font-weight: bold;
+
+        .intro-img {
+            max-width: 70%;
+            margin: 5%;
+
+            img {
+                width: 100%;
+                max-width: 315px;
+                height: auto;
+                border-radius: 20px;
+                transition: 1s;
+            }
+
+            img:hover {
+                box-shadow: 10px 20px 30px rgba(0, 0, 0, 1);
+                transform: translateY(-8px);
+                transition: box-shadow 1s ease, transform 1s ease;
+            }
+
+            img:active {
+                box-shadow: none;
+            }
         }
 
-        .kleine-text-onder-foto-werk {
-            font-size: 20px;
-            font-style: italic;
-            font-weight: lighter;
+        .intro-txt {
+            max-width: 70%;
+            background-color: #04a8e3;
+            border-radius: 30px;
+            margin: 5%;
+
+            .naam {
+                margin: 15px;
+                font-size: 30px;
+                padding: 10px;
+                padding-bottom: 0;
+            }
+
+            .beschrijving-mij {
+                font-size: 20px;
+                margin: 15px;
+                padding: 10px;
+            }
         }
     }
 
+    .codering-kennis{
+
+    }
+
+    .behaalde-diplomas{
+        border: 5px dashed #00487C;
+
+    }
+
+    .werk-geschiedenis{
+        border: 5px dashed #00487C;
+    }
+
+    .hobbys{
+        height: 70vh;
+        width: 100%;
+
+        p{
+            border-radius: 30px;
+            border: 5px solid #00487C;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 5%;
+            height: 60%;
+            width: 80%;
+            background-image: url("./foto's/img.png");
+            background-size: cover;
+            animation: hobbycolage 9s 3s infinite;
+        }
+
+    }
+
+    footer{
+        background-color: #00487C;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 7vh;
+        width: 100%;
+        font-size: 20px;
+        padding: 10px;
+        margin-top: 0 ;
+
+        a{
+            background-color: #04a8e3;
+            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
+
+        a:hover{
+            background-color: #3EEAFF;
+        }
+    }
 }
 
+@media all and (width >= 992px){
+
+    *{
+        font-family: "Trebuchet MS";
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+    }
+
+    body{
+        background-image: url("./foto's/achtergrondCv.png");
+        color: white;
+
+        .wit-ruimte{
+            height: 10vh;
+        }
+
+        .blok-soort-rechts{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: auto;
+            margin-bottom: 40px;
+            margin-top: 40px;
+
+            .rechts-box {
+                width: 40%;
+                text-align: center;
+                align-content: center;
+                align-items: center;
+                background-color: #00487C;
+                border-radius: 30px;
+                border-bottom-right-radius: 0px;
+                border-top-right-radius: 0px;
+
+                p {
+                    width: 60%;
+                    margin-left: 20%;
+                    margin-right: 10%;
+                    font-size: 20px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+            }
+
+            p{
+                width: 60%;
+                text-align: center;
+                align-content: center;
+            }
+        }
+
+        .blok-soort-links{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: auto;
+            margin-bottom: 40px;
+            margin-top: 40px;
+
+            .links-box{
+                background-color: #00487C;
+                width: 40%;
+                border-radius: 30px;
+                border-bottom-left-radius: 0px;
+                border-top-left-radius: 0px;
+                text-align: center;
+                align-content: center;
+
+                p {
+                    width: 60%;
+                    margin-left: 20%;
+                    margin-right: 10%;
+                    font-size: 20px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+            }
+
+            p{
+                width: 60%;
+                text-align: center;
+                align-content: center;
+            }
+        }
+
+        .div-procent-balk{
+            border-radius: 30px;
+            background-color: #04a8e3;
+            width: 60%;
+            margin-left: 20%;
+            margin-right: 20%;
+            height: 30%;
+            position: relative;
+
+            p{
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                font-size: 25px;
+            }
+
+            .tien-procent{
+                text-align: center;
+                border-radius: 30px;
+                background-color: #00487C;
+                height: 100%;
+                width: 10%;
+
+            }
+
+            .zeventig-procent{
+                text-align: center;
+                border-radius: 30px;
+                background-color: #00487C;
+                height: 100%;
+                width: 70%;
+                align-content: center;
+                font-size: 25px;
+
+            }
+
+            .tachtig-procent{
+                text-align: center;
+                border-radius: 30px;
+                background-color: #00487C;
+                height: 100%;
+                width: 80%;
+                align-content: center;
+                font-size: 25px;
+
+            }
+
+            .negentig-procent{
+                text-align: center;
+                border-radius: 30px;
+                background-color: #00487C;
+                height: 100%;
+                width: 90%;
+                align-content: center;
+                font-size: 25px;
+
+            }
+        }
+
+        .div-scheiding{
+            width: 60%;
+            align-content: center;
+            text-align: center;
+        }
+
+        .fotos-title{
+            background-color: #04a8e3;
+            border-radius: 30px;
+            width: 50%;
+            margin-top: 5vh;
+            margin-left: 25%;
+            margin-right: 25%;
+            align-content: center;
+
+            h2{
+                text-align: center;
+                font-size: 45px;
+                margin: 20px;
+            }
+        }
+
+        .fotos{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 10%;
+
+            .foto-box img{
+                width: 80%;
+                height: auto;
+                object-fit: cover;
+                border: 5px solid #00487C;
+                border-radius: 30px;
+                transition: 1s;
+
+            }
+
+            .foto-box{
+                transition: 1s;
+            }
+
+            .foto-box:hover{
+                transform: scale(110%);
+                transition: transform 1s ease-in-out, border 1s ease-in-out;
+                .txt-foto{
+                    opacity: 1;
+                    visibility: visible;
+                    transition: opacity 1s ease-in-out;
+
+                }
+
+                .txt-foto-kwaakvos{
+                    opacity: 1;
+                    visibility: visible;
+                    transition: 1s;
+                }
+
+                img{
+                    opacity: 0.8;
+                    transition: opacity 1s ease-in-out;
+                }
+            }
+
+            .txt-foto{
+                text-align: center;
+                visibility: collapse;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 184px;
+                height: 184px;
+                margin: 5px;
+                border-radius: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                transition: opacity 1s ease-in-out, transform 1s ease-in-out, visibility 1s ease-in-out;
+
+                .naam-plaats-diploma {
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+
+                .kleine-text-onder-foto-diploma {
+                    font-size: 20px;
+                    font-style: italic;
+                    font-weight: lighter;
+                }
+
+                .naam-plaats-werk {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                .kleine-text-onder-foto-werk {
+                    font-size: 15px;
+                    font-style: italic;
+                    font-weight: lighter;
+                }
+
+            }
+
+            .txt-foto-kwaakvos{
+                text-align: center;
+                visibility: collapse;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 184px;
+                height: 162px;
+                margin: 5px;
+                border-radius: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                transition: opacity 1s ease-in-out, transform 1s ease-in-out, visibility 1s ease-in-out;
+
+                .naam-plaats-werk {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                .kleine-text-onder-foto-werk {
+                    font-size: 15px;
+                    font-style: italic;
+                    font-weight: lighter;
+                }
+            }
+
+        }
+
+    }
+
+    .intro {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 20px;
+
+
+        .intro-img {
+            max-width: 50%;
+            margin: 20px;
+
+            img {
+                width: 100%;
+                max-width: 315px;
+                height: auto;
+                border-radius: 20px;
+                transition: 1s;
+            }
+
+            img:hover {
+                box-shadow: 10px 20px 30px rgba(0, 0, 0, 1);
+                transform: translateY(-8px);
+                transition: box-shadow 1s ease, transform 1s ease;
+            }
+
+            img:active {
+                box-shadow: none;
+            }
+        }
+
+        .intro-txt {
+            max-width: 50%;
+            background-color: #04a8e3;
+            border-radius: 30px;
+            margin: 5%;
+
+            .naam {
+                margin: 30px;
+                font-size: 40px;
+            }
+
+            .beschrijving-mij {
+                font-size: 20px;
+                margin: 30px;
+            }
+        }
+    }
+
+    .codering-kennis{
+
+    }
+
+    .behaalde-diplomas{
+        border: 10px dashed #00487C;
+
+    }
+
+    .werk-geschiedenis{
+        border: 10px dashed #00487C;
+    }
+
+    .hobbys{
+        height: 70vh;
+        width: 100%;
+
+        p{
+            border-radius: 30px;
+            border: 5px solid #00487C;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-top: 5%;
+            height: 60%;
+            width: 70%;
+            background-image: url("./foto's/img.png");
+            background-size: cover;
+            animation: hobbycolage 9s 3s infinite;
+        }
+
+    }
+
+    footer{
+        background-color: #00487C;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10vh;
+        width: 100%;
+        font-size: 30px;
+        padding: 10px;
+
+        a{
+            background-color: #04a8e3;
+            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
+
+        a:hover{
+            background-color: #3EEAFF;
+        }
+    }
+}
