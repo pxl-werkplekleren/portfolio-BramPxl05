@@ -61,4 +61,30 @@ body {
         align-self: center;
         align-content: center;
     }
+
+    div{
+        align-items: center;
+        align-content: center;
+        align-self: center;
+        horiz-align: center;
+        text-align: center;
+        margin-top: 5vh;
+
+        a{
+            background-color: #04a8e3;
+            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            horiz-align: center;
+            vertical-align: center;
+            align-self: center;
+            font-size: 50px;
+        }
+
+        a:hover{
+            background-color: #3EEAFF;
+        }
+    }
+
 }
